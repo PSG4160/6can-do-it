@@ -1,5 +1,5 @@
 # 데이터 불러오기
-import seaborn as sns
+import seaborn as snss
 
 
 titanic = sns.load_dataset('titanic')
