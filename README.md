@@ -1,9 +1,12 @@
 # [AI_8기] 6조 머신러닝 & 딥러닝 팀과제
-| ✭**박성규** | **김민철** | **이**시헌 | **박윤지** |
-|:--------:|:-------:|:-------:|:-------:|
+
+| **팀원** | ✭박성규            | 김민철         | 이시헌          | 박윤지                  |
+|:------:|:---------------:|:-----------:|:------------:|:--------------------:|
+| **역할** | 오류 제어 및 REPO 관리 | 예측 모델 성능 향상 | README.md 작성 | GIT 충돌 관리 및 팀원 코드 리뷰 |
+
 ## 개발 환경
 
-![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png) ![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png)![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png)
+![://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nmhttps1.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png) ![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png)![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png)
 
 ## 진행한 프로젝트 목록
 
@@ -13,15 +16,15 @@
 
 #### 목표
 
-1.  데이터셋 불러오기
+1. 데이터셋 불러오기
 
-2.  feature 분석
+2. feature 분석
 
-3.  feature engineering
+3. feature engineering
 
-4.  모델 학습시키기
+4. 모델 학습시키기
 
-####     타이타닉 생존자 예측 결과 모델 성능 비교
+#### 타이타닉 생존자 예측 결과 모델 성능 비교
 
 | **모델**      | **Accuracy** | <span style="color:red">**Precision (희생자)**</span> | <span style="color:blue">**Precision (생존자)**</span> | <span style="color:red">**Recall (희생자)**</span> | <span style="color:blue">**Recall (생존자)**</span> | <span style="color:red">**F1-Score (희생자)**</span> | <span style="color:blue">**F1-Score (생존자)**</span> |
 | ----------- | ------------ | -------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------ | ------------------------------------------------- | -------------------------------------------------- |
@@ -51,8 +54,6 @@
 
 #### 추가 목표
 
-- [x]  NLP 이용
+- [x] NLP 이용
 
 - [x] 긍정 / 부정 리뷰의 워드 클라우드 그려보기
-
-
