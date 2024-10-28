@@ -252,7 +252,7 @@ titanic = sns.load_dataset('titanic')
 <p>891 rows × 15 columns</p>
 </div>
 </details>
-
+<br>
 <details>
 <summary>2. feature 분석</summary>
 
@@ -475,7 +475,7 @@ titanic.describe()
 </table>
 </div>
 
-# 타이타닉 데이터셋 주요 항목
+`타이타닉 데이터셋 주요 항목`
 
 | <span style="color:blue">**항목**</span>         | <span style="color:blue">**설명**</span>                                     |
 |--------------------------------------------------|------------------------------------------------------------------------------|
@@ -486,32 +486,108 @@ titanic.describe()
 | <span style="color:orange">**parch**</span>      | 동반한 부모 및 자녀 수                                                       |
 | <span style="color:teal">**fare**</span>         | 승객이 지불한 운임 금액                                                       |
 
-# 📊 데이터셋 통계 설명
+`데이터셋 통계 설명`
 
-- **🔢 count**:  
-  &nbsp;&nbsp;데이터가 존재하는 항목의 개수 (결측치를 제외한 값의 개수)
-
-- **📈 mean**:  
-  &nbsp;&nbsp;값들의 평균
-
-- **📐 std (Standard Deviation)**:  
-  &nbsp;&nbsp;표준편차로, 데이터가 평균으로부터 얼마나 퍼져 있는지를 나타냄
-
-- **🔻 min**:  
-  &nbsp;&nbsp;데이터의 최소값
-
-- **⬇️ 25% (1st Quartile)**:  
-  &nbsp;&nbsp;하위 25%에 해당하는 값. 데이터의 25%가 이 값보다 작음
-
-- **⚖️ 50% (Median)**:  
-  &nbsp;&nbsp;중위값 (데이터의 중간 값). 데이터의 50%가 이 값보다 작거나 같음
-
-- **⬆️ 75% (3rd Quartile)**:  
-  &nbsp;&nbsp;상위 25%에 해당하는 값. 데이터의 75%가 이 값보다 작음
-
-- **🔺 max**:  
-  &nbsp;&nbsp;데이터의 최대값
-
+| <span style="color:blue">**지표**</span>        | <span style="color:blue">**설명**</span>                                                                |
+|------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| <span style="color:blue">**count**</span>      | 데이터가 존재하는 항목의 개수 (결측치를 제외한 값의 개수)                                               |
+| <span style="color:green">**mean**</span>      | 값들의 평균                                                                                            |
+| <span style="color:purple">**std**</span>      | 표준편차 (데이터가 평균으로부터 얼마나 퍼져 있는지를 나타냄)                                           |
+| <span style="color:orange">**min**</span>      | 데이터의 최소값                                                                                        |
+| <span style="color:teal">**25%**</span>        | 하위 25%에 해당하는 값. 데이터의 25%가 이 값보다 작음                                                   |
+| <span style="color:orange">**50%**</span>      | 중위값 (데이터의 중간 값). 데이터의 50%가 이 값보다 작거나 같음                                         |
+| <span style="color:teal">**75%**</span>        | 상위 25%에 해당하는 값. 데이터의 75%가 이 값보다 작음                                                   |
+| <span style="color:red">**max**</span>         | 데이터의 최대값                                                                                        |
+`데이터셋 통계`
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>survived</th>
+      <th>pclass</th>
+      <th>age</th>
+      <th>sibsp</th>
+      <th>parch</th>
+      <th>fare</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>891.000000</td>
+      <td>891.000000</td>
+      <td>714.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
+      <td>891.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>0.383838</td>
+      <td>2.308642</td>
+      <td>29.699118</td>
+      <td>0.523008</td>
+      <td>0.381594</td>
+      <td>32.204208</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.486592</td>
+      <td>0.836071</td>
+      <td>14.526497</td>
+      <td>1.102743</td>
+      <td>0.806057</td>
+      <td>49.693429</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.000000</td>
+      <td>1.000000</td>
+      <td>0.420000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.000000</td>
+      <td>2.000000</td>
+      <td>20.125000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>7.910400</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.000000</td>
+      <td>3.000000</td>
+      <td>28.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>14.454200</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>1.000000</td>
+      <td>3.000000</td>
+      <td>38.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>31.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>1.000000</td>
+      <td>3.000000</td>
+      <td>80.000000</td>
+      <td>8.000000</td>
+      <td>6.000000</td>
+      <td>512.329200</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
 #### 타이타닉 생존자 예측 결과 모델 성능 비교
 
