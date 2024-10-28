@@ -17,16 +17,18 @@
 > 타이타닉 탑승객 데이터셋을 활용해 생존자를 예측하는 모델을 만드는 프로젝트
 
 #### 목표
-
+<details>
+<summary>
 1. 데이터셋 불러오기
-```python
+</summary>
+  ```python
             import seaborn as sns
             titanic = sns.load_dataset('titanic')
             titanic
-```
-<details>
-<summary> 출력 결과 </summary>
-<div>
+  ```
+  <details>
+  <summary> 출력 결과 </summary>
+  <div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -252,13 +254,13 @@
 <p>891 rows × 15 columns</p>
 </div>
 </details>
-        
+</details>
 
-1. feature 분석
+2. feature 분석
 
-2. feature engineering
+3. feature engineering
 
-3. 모델 학습시키기
+4. 모델 학습시키기
    
    
 
