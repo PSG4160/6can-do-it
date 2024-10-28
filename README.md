@@ -27,19 +27,6 @@
 <details>
 <summary> 출력 결과 </summary>
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -267,11 +254,11 @@
 </details>
         
 
-2. feature 분석
+1. feature 분석
 
-3. feature engineering
+2. feature engineering
 
-4. 모델 학습시키기
+3. 모델 학습시키기
    
    
 
