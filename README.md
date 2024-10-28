@@ -1,15 +1,9 @@
 # [AI_8기] 6조 머신러닝 & 딥러닝 팀과제
-
+| ✭**박성규** | **김민철** | **이**시헌 | **박윤지** |
+|:--------:|:-------:|:-------:|:-------:|
 ## 개발 환경
 
 ![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png) ![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png)![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png)
-
-
-
-## 참여 인원
-
-| ✭**박성규** | **김민철** | **이**시헌 | **박윤지** |
-|:--------:|:-------:|:-------:|:-------:|
 
 ## 진행한 프로젝트 목록
 
