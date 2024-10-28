@@ -66,24 +66,29 @@
 과제 특이점
 
 <details>
-  <summary>### 🌟 박성규</summary>
+  <summary> 🌟 박성규</summary>
   <p>여기에 박성규에 대한 과제 특이점을 작성할 수 있습니다.</p>
 </details>
 
 
 
-#### 🌟 김민철
-
+<details>
+  <summary> 🌟 김민철</summary>
+  <p>여기에 김민철에 대한 과제 특이점을 작성할 수 있습니다.</p>
+</details>
 
 
 
-#### 🌟 이시헌
-
+<details>
+  <summary> 🌟 이시헌</summary>
+  <p>여기에 이시헌에 대한 과제 특이점을 작성할 수 있습니다.</p>
+</details>
 
 
-
-#### 🌟 박윤지
-
+<details>
+  <summary>🌟 박윤지</summary>
+  <p>여기에 박윤지에 대한 과제 특이점을 작성할 수 있습니다.</p>
+</details>
 
 
 
