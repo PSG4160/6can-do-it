@@ -4,8 +4,6 @@
 |:------:|:---------------:|:-----------:|:------------:|:--------------------:|
 | **역할** | 오류 제어 및 REPO 관리 | 예측 모델 성능 향상 | README.md 작성 | GIT 충돌 관리 및 팀원 코드 리뷰 |
 
-
-
 ## 개발 환경
 
 ![://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nmhttps1.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png) ![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png)![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png)
@@ -17,6 +15,7 @@
 > 타이타닉 탑승객 데이터셋을 활용해 생존자를 예측하는 모델을 만드는 프로젝트
 
 #### 목표
+
 <details>
 <summary>1. 데이터셋 불러오기</summary>
 
@@ -253,15 +252,20 @@
 </div>
 </details>
 
-1. feature 분석
-
-2. feature engineering
-
-3. 모델 학습시키기
-   
-   
+<details>
+    <summary>2. feature 분석 </summary>
+        asdfasdf
+</deatils>
 
 <details>
+    <summary>3. feature engineering</summary>
+        adsfasdf
+</deatils>
+
+<details>
+    <summary>4. 모델 학습시키기 (Logistic Regression, Random Forest, XGBoost)</summary>
+        asdfasdf
+</deatils>
 
 <summary>타이타닉 생존자 예측 결과 모델 성능 비교</summary>
 
@@ -272,8 +276,6 @@
 | **XGBoost** | 0.8045       | <span style="color:red">0.82</span>                | <span style="color:blue">0.78</span>                | <span style="color:red">0.86</span>             | <span style="color:blue">0.73</span>             | <span style="color:red">0.84</span>               | <span style="color:blue">0.76</span>               |
 
 </details>
-
-
 
 ##### 요약
 
