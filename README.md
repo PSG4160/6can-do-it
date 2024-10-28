@@ -259,15 +259,15 @@
 
 <details>
     <summary>3. feature engineering</summary>
-        adsfasdf
-</deatils>
+        adsfa
+</details>
 
 <details>
     <summary>4. 모델 학습시키기 (Logistic Regression, Random Forest, XGBoost)</summary>
         asdfasdf
-</deatils>
+</details>
 
-<summary>타이타닉 생존자 예측 결과 모델 성능 비교</summary>
+#### 타이타닉 생존자 예측 결과 모델 성능 비교
 
 | **모델**      | **Accuracy** | <span style="color:red">**Precision (희생자)**</span> | <span style="color:blue">**Precision (생존자)**</span> | <span style="color:red">**Recall (희생자)**</span> | <span style="color:blue">**Recall (생존자)**</span> | <span style="color:red">**F1-Score (희생자)**</span> | <span style="color:blue">**F1-Score (생존자)**</span> |
 | ----------- | ------------ | -------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------- | ------------------------------------------------ | ------------------------------------------------- | -------------------------------------------------- |
