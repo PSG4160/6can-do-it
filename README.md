@@ -385,31 +385,7 @@ titanic.head()
 titanic.describe()
 ```
 
-### 📊 데이터셋 통계 설명
 
-- **🔢 count**:  
-  &nbsp;&nbsp;데이터가 존재하는 항목의 개수 (결측치를 제외한 값의 개수)
-
-- **📈 mean**:  
-  &nbsp;&nbsp;값들의 평균
-
-- **📐 std (Standard Deviation)**:  
-  &nbsp;&nbsp; 표준편차로, 데이터가 평균으로부터 얼마나 퍼져 있는지를 나타냄
-
-- **🔻 min**:  
-  &nbsp;&nbsp;데이터의 최소값
-
-- **⬇️ 25% (1st Quartile)**:  
-  &nbsp;&nbsp;하위 25%에 해당하는 값. 데이터의 25%가 이 값보다 작음
-
-- **⚖️ 50% (Median)**:  
-  &nbsp;&nbsp;중위값 (데이터의 중간 값). 데이터의 50%가 이 값보다 작거나 같음
-
-- **⬆️ 75% (3rd Quartile)**:  
-  &nbsp;&nbsp;상위 25%에 해당하는 값. 데이터의 75%가 이 값보다 작음
-
-- **max**:  
-  &nbsp;&nbsp;🔺 데이터의 최대값
 
 
 <!-- 통계 df -->
@@ -504,7 +480,42 @@ titanic.describe()
 </div>
 </details>
 
+# 타이타닉 데이터셋 주요 항목
 
+| <span style="color:blue">**항목**</span>         | <span style="color:blue">**설명**</span>                                     |
+|--------------------------------------------------|------------------------------------------------------------------------------|
+| <span style="color:blue">**survived**</span>     | 승객 생존 여부 (0 = 사망, 1 = 생존)                                          |
+| <span style="color:green">**pclass**</span>      | 객실 등급 (1 = 1등석, 2 = 2등석, 3 = 3등석)                                  |
+| <span style="color:purple">**age**</span>        | 승객 나이                                                                     |
+| <span style="color:orange">**sibsp**</span>      | 동반한 형제자매 및 배우자 수                                                 |
+| <span style="color:orange">**parch**</span>      | 동반한 부모 및 자녀 수                                                       |
+| <span style="color:teal">**fare**</span>         | 승객이 지불한 운임 금액                                                       |
+
+# 📊 데이터셋 통계 설명
+
+- **🔢 count**:  
+  &nbsp;&nbsp;데이터가 존재하는 항목의 개수 (결측치를 제외한 값의 개수)
+
+- **📈 mean**:  
+  &nbsp;&nbsp;값들의 평균
+
+- **📐 std (Standard Deviation)**:  
+  &nbsp;&nbsp;표준편차로, 데이터가 평균으로부터 얼마나 퍼져 있는지를 나타냄
+
+- **🔻 min**:  
+  &nbsp;&nbsp;데이터의 최소값
+
+- **⬇️ 25% (1st Quartile)**:  
+  &nbsp;&nbsp;하위 25%에 해당하는 값. 데이터의 25%가 이 값보다 작음
+
+- **⚖️ 50% (Median)**:  
+  &nbsp;&nbsp;중위값 (데이터의 중간 값). 데이터의 50%가 이 값보다 작거나 같음
+
+- **⬆️ 75% (3rd Quartile)**:  
+  &nbsp;&nbsp;상위 25%에 해당하는 값. 데이터의 75%가 이 값보다 작음
+
+- **🔺 max**:  
+  &nbsp;&nbsp;데이터의 최대값
 
 
 #### 타이타닉 생존자 예측 결과 모델 성능 비교
