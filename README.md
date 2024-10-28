@@ -18,17 +18,15 @@
 
 #### 목표
 <details>
-<summary>
-1. 데이터셋 불러오기
-</summary>
-  ```python
-            import seaborn as sns
-            titanic = sns.load_dataset('titanic')
-            titanic
-  ```
-  <details>
-  <summary> 출력 결과 </summary>
-  <div>
+<summary>1. 데이터셋 불러오기</summary>
+
+```python
+    import seaborn as sns
+    titanic = sns.load_dataset('titanic')
+    titanic
+```
+
+<div>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -254,13 +252,12 @@
 <p>891 rows × 15 columns</p>
 </div>
 </details>
-</details>
 
-2. feature 분석
+1. feature 분석
 
-3. feature engineering
+2. feature engineering
 
-4. 모델 학습시키기
+3. 모델 학습시키기
    
    
 
