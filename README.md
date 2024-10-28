@@ -384,10 +384,6 @@ titanic.head()
 
 titanic.describe()
 ```
-
-
-
-
 <!-- 통계 df -->
 <div>
 <table border="1" class="dataframe">
@@ -478,7 +474,6 @@ titanic.describe()
   </tbody>
 </table>
 </div>
-</details>
 
 # 타이타닉 데이터셋 주요 항목
 
