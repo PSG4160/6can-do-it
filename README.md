@@ -999,72 +999,81 @@ print(f'XGBoost 모델의 MSE: {mse_xgb}')
 5. 모델별 시각화 자료 (추가)
 </summary>
 
-> 혼동 행렬 시각화
+> 혼동 행렬 시각화 (Confusion Matrix)
 
 ```py
 import matplotlib.pyplot as plt
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay, roc_curve, auc
 
-# 혼동 행렬 계산
-cm = confusion_matrix(y_test, y_pred)
-
-# 혼동 행렬 시각화
-plt.figure(figsize=(8, 6))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['Not Cancer', 'Cancer'], yticklabels=['Not Cancer', 'Cancer'])
-plt.xlabel('Predicted Label')
-plt.ylabel('True Label')
+# Confusion Matrix 시각화
+conf_matrix = confusion_matrix(y_test, y_pred)
+disp = ConfusionMatrixDisplay(confusion_matrix=conf_matrix)
+disp.plot(cmap=plt.cm.Blues)
 plt.title('Confusion Matrix')
 plt.show()
 ```
 
-![confusionmatrix](https://github.com/user-attachments/assets/d377b51b-89ca-49db-a371-e93f2cb9580b)
+![ConfusionMatrix](https://github.com/user-attachments/assets/70734599-86ee-4d8a-ae0a-c4fe5a317771)
 
-> 결정 트리 시각화
+
+> 특성 중요도 (회귀 계수) 시각화
+
+```py
+feature_importance = model.coef_[0]  # 로지스틱 회귀 모델의 계수
+features = X.columns
+
+# 시각화
+plt.figure(figsize=(10, 6))
+plt.barh(features, feature_importance, color='skyblue')
+plt.xlabel('Coefficient Value')
+plt.ylabel('Features')
+plt.title('Feature Importance in Logistic Regression')
+plt.show()
+```
+
+![LogisticRegression](https://github.com/user-attachments/assets/e439404f-f671-45ad-a209-e46255b45fb8)
+
+> 결정 트리 시각화 (Decision Tree)
 
 ```py
 from sklearn.tree import plot_tree
 
-# 결정 트리 시각화
-plt.figure(figsize=(12, 8))
-plot_tree(model, filled=True, feature_names=X.columns, class_names=['Not Survived', 'Survived'])
-plt.title('Decision Tree Visualization')
+# min_samples_split, min_samples_leaf로 모델 제약하기
+model = DecisionTreeClassifier(random_state=42, min_samples_split=20, min_samples_leaf=10)
+model.fit(X_train, y_train)
+
+plt.figure(figsize=(20,10))
+plot_tree(model, filled=True, feature_names=X.columns, class_names=['Not Survived', 'Survived'], max_depth=4)
+plt.title('Simplified Decision Tree')
 plt.show()
 ```
+![DecisionTree](https://github.com/user-attachments/assets/9664fe93-9318-4619-8edc-c440b41dc8d0)
 
-![plottree](https://github.com/user-attachments/assets/22f0a9a5-fdff-4971-b30a-bbc9adbcc70d)
-
-> XGBoost 시각화
-
-`예측 결과와 실제 값을 비교하는 산점도 시각화`
+> XGBoost 특성 중요도 시각화
 
 ```py
+# feature_importances_: XGBoost 모델이 예측을 수행하는 데 얼마나 많은 정보를 각 특성에서 얻는지를 나타낸다.
+# 특성 중요도 추출
+feature_importance = xgb_model.feature_importances_
+features = X.columns
+
+
+# 특성 중요도 시각화
 plt.figure(figsize=(10, 6))
-plt.scatter(y_test, y_pred_xgb, alpha=0.7)
-plt.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--')  # 대각선 추가
-plt.xlabel('Actual Values')
-plt.ylabel('Predicted Values')
-plt.title('Actual vs Predicted Values (XGBoost)')
+plt.barh(features, feature_importance, color='skyblue')
+plt.xlabel('Importance')
+plt.ylabel('Features')
+plt.title('Feature Importance in XGBoost')
 plt.show()
 ```
 
-![xgboost1](https://github.com/user-attachments/assets/2de22727-acbe-4130-a8a6-00df409d19be)
-
-`XGBOOST의 특성 중요도 시각화`
-
-```py
-plt.figure(figsize=(12, 8))
-xgb.plot_importance(xgb_model, importance_type='weight', max_num_features=10)
-plt.title('Feature Importance (XGBoost)')
-plt.show()
-```
-
-![xgboost2](https://github.com/user-attachments/assets/6171d604-b6b4-4f84-97ff-90693c919e21)
+![XgBoost1](https://github.com/user-attachments/assets/322fe761-d333-4853-80f0-da1a5080b558)
 
 </details>
 <br>
 <details>
 <summary>
-6. 모델 성능 비교 (추가)
+1. 모델 성능 비교 (추가)
 </summary>
 
 > 🐳 타이타닉 생존자 예측 결과 모델 성능 비교
