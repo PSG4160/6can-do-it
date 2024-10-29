@@ -981,16 +981,16 @@ print(f'XGBoost 모델의 MSE: {mse_xgb}')
 
 | **모델**          | **Accuracy** | <span style="color:red">**Precision (희생자)**</span> | <span style="color:blue">**Precision (생존자)**</span> | <span style="color:red">**Recall (희생자)**</span> | <span style="color:blue">**Recall (생존자)**</span> | <span style="color:red">**F1-Score (희생자)**</span> | <span style="color:blue">**F1-Score (생존자)**</span> |
 | ----------------- | ------------ | ----------------------------------------------------- | ------------------------------------------------------ | -------------------------------------------------- | --------------------------------------------------- | ---------------------------------------------------- | ----------------------------------------------------- |
-| **로지스틱 회귀** | 0.8045       | <span style="color:red">0.82</span>                   | <span style="color:blue">0.78</span>                   | <span style="color:red">0.86</span>                | <span style="color:blue">0.73</span>                | <span style="color:red">0.84</span>                  | <span style="color:blue">0.76</span>                  |
-| **결정 트리**     | 0.7709       | <span style="color:red">0.83</span>                   | <span style="color:blue">0.70</span>                   | <span style="color:red">0.76</span>                | <span style="color:blue">0.78</span>                | <span style="color:red">0.80</span>                  | <span style="color:blue">0.74</span>                  |
+| **Logistic Regression** | 0.8045       | <span style="color:red">0.82</span>                   | <span style="color:blue">0.78</span>                   | <span style="color:red">0.86</span>                | <span style="color:blue">0.73</span>                | <span style="color:red">0.84</span>                  | <span style="color:blue">0.76</span>                  |
+| **Decision Tree**     | 0.7709       | <span style="color:red">0.83</span>                   | <span style="color:blue">0.70</span>                   | <span style="color:red">0.76</span>                | <span style="color:blue">0.78</span>                | <span style="color:red">0.80</span>                  | <span style="color:blue">0.74</span>                  |
 | **XGBoost**       | 0.8045       | <span style="color:red">0.82</span>                   | <span style="color:blue">0.78</span>                   | <span style="color:red">0.86</span>                | <span style="color:blue">0.73</span>                | <span style="color:red">0.84</span>                  | <span style="color:blue">0.76</span>                  |
 
 
 ##### 요약
 
-- **로지스틱 회귀**와 **XGBoost** 모델은 동일한 정확도(80.45%)로 높은 성능을 보임.
-- **결정 트리**는 정확도는 상대적으로 낮지만, 생존자 클래스(1)의 Recall이 높아 생존자를 잘 예측.
-- **로지스틱 회귀**와 **XGBoost** 모델이 결정 트리보다 전반적으로 우수한 성능을 보임.
+- **Logistic Regression**와 **XGBoost** 모델은 동일한 정확도(80.45%)로 높은 성능을 보임.
+- **Decision Tree**는 정확도는 상대적으로 낮지만, 생존자 클래스(1)의 Recall이 높아 생존자를 잘 예측.
+- **Logistic Regression**와 **XGBoost** 모델이 Decision Tree보다 전반적으로 우수한 성능을 보임.
 
 </details>
 
