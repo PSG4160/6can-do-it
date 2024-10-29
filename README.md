@@ -400,7 +400,7 @@ titanic.describe()
 
 `타이타닉 데이터셋 주요 통계 (열 Column)`
 
-| <span style="color:blue">**지표**</span>        | <span style="color:blue">**설명**</span>                                                                |
+| <span style="color:blue">**지표**</span>        | <span style="color:blue">**설명**</span>                                                            
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | <span style="color:blue">**count**</span>      | 데이터가 존재하는 항목의 개수 (결측치를 제외한 값의 개수)                                               |
 | <span style="color:green">**mean**</span>      | 값들의 평균                                                                                            |
