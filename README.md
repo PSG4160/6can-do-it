@@ -1,8 +1,9 @@
 # [AI_8기] 6조 머신러닝 & 딥러닝 팀과제
 
-| **팀원** | ✭박성규            | 김민철         | 이시헌          | 박윤지                  |
-|:------:|:---------------:|:-----------:|:------------:|:--------------------:|
-| **역할** | 오류 제어 및 REPO 관리 | 예측 모델 성능 향상 | README.md 작성 | GIT 충돌 관리 및 팀원 코드 리뷰 |
+| **팀원** | ✭박성규                                                                                            | 김민철                                                                                              | 이시헌                                                                                            | 박윤지                                                                                             |
+|:------:|:-----------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------:|:----------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------:|
+|        | ![박성규님](https://github.com/user-attachments/assets/40f97c52-c562-44b0-bef6-12289e149d27) | ![김민철님](https://github.com/user-attachments/assets/28b83bd5-13c2-4249-beab-64f7567e1816) | ![이시헌님](https://github.com/user-attachments/assets/7b91b2aa-c113-44ed-8f41-e8df1ef7d06d) | ![박윤지님](https://github.com/user-attachments/assets/8d5be377-1a58-4f88-9ee2-176d1e1d162e) |
+| **역할** | 오류 제어 및 REPO 관리                                                                                 | 예측 모델 성능 향상                                                                                      | README.md 작성                                                                                   | GIT 충돌 관리 및 팀원 코드 리뷰                                                                            |
 
 ## 개발 환경
 
@@ -1007,7 +1008,9 @@ plt.ylabel('True Label')
 plt.title('Confusion Matrix')
 plt.show()
 ```
+
 ![confusionmatrix](https://github.com/user-attachments/assets/d377b51b-89ca-49db-a371-e93f2cb9580b)
+
 > 결정 트리 시각화
 
 ```py
@@ -1019,8 +1022,8 @@ plot_tree(model, filled=True, feature_names=X.columns, class_names=['Not Survive
 plt.title('Decision Tree Visualization')
 plt.show()
 ```
-![plottree](https://github.com/user-attachments/assets/22f0a9a5-fdff-4971-b30a-bbc9adbcc70d)
 
+![plottree](https://github.com/user-attachments/assets/22f0a9a5-fdff-4971-b30a-bbc9adbcc70d)
 
 > XGBoost 시각화
 
@@ -1035,6 +1038,7 @@ plt.ylabel('Predicted Values')
 plt.title('Actual vs Predicted Values (XGBoost)')
 plt.show()
 ```
+
 ![xgboost1](https://github.com/user-attachments/assets/2de22727-acbe-4130-a8a6-00df409d19be)
 
 `XGBOOST의 특성 중요도 시각화`
