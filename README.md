@@ -410,8 +410,6 @@ titanic.describe()
 | <span style="color:orange">**50%**</span>      | 중위값 (데이터의 중간 값). 데이터의 50%가 이 값보다 작거나 같음                                         |
 | <span style="color:teal">**75%**</span>        | 상위 25%에 해당하는 값. 데이터의 75%가 이 값보다 작음                                                   |
 | <span style="color:red">**max**</span>         | 데이터의 최대값   
-|
-
 
 > 데이터셋 통계
 
