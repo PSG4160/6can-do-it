@@ -521,7 +521,7 @@ titanic.describe()
 titanic.isnull().sum()
 ```
 
-| <span style="color:blue">**특성**</span>       | <span style="color:blue">**결측치 수**</span> |
+| <span style="color:blue">**항목**</span>       | <span style="color:blue">**결측치 수**</span> |
 |-----------------------------------------------|----------------------------------------------|
 | <span style="color:blue">**survived**</span>  | 0                                            |
 | <span style="color:green">**pclass**</span>   | 0                                            |
@@ -815,12 +815,168 @@ print(titanic['family_size'].head())
 <p>891 rows × 16 columns</p>
 </div>
 
+</details>
 <br>
-4. 모델 학습시키기 (Logistic Regression, Random Forest, XGBoost)
 
+<details>
+<summary>
+4. 모델 학습시키기 (Logistic Regression, Decision Tree, XGBoost)  
+</summary>
 
-<!-- <br>
-1. 모델 성능 비교
+`데이터 스케일링 진행`
+```py
+#feature와 target 분리
+
+titanic = titanic[['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare', 'embarked', 'family_size']]
+X = titanic.drop('survived', axis=1) # feature
+y = titanic['survived'] # target
+
+# x는 승객의 생존 여부를 제외한 나머지 모든 열을 학습에 사용할 특징
+# y는 승객이 생존했는지의 여부
+# x로 y를 예측
+```
+> Logistic Regression
+
+```py
+# Logistic Regression
+
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report
+
+# 데이터 분할
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 데이터 스케일링
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# 모델 생성 및 학습
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# 예측
+y_pred = model.predict(X_test)
+
+# 평가
+print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
+print(f"Classification Report:\n{classification_report(y_test, y_pred)}")
+```
+
+> 🔍 Logistic Regression 결과 요약
+> 
+| **지표**                  | **희생자 (0)**                               | **생존자 (1)**                                |
+|---------------------------|----------------------------------------------|-----------------------------------------------|
+| **정밀도 (Precision)**     | 0.82 (모델이 예측한 '희생자' 중 실제 희생자 비율) | 0.78 (모델이 예측한 '생존자' 중 실제 생존자 비율) |
+| **재현율 (Recall)**        | 0.86 (실제 희생자 중 정확히 예측한 비율)         | 0.73 (실제 생존자 중 정확히 예측한 비율)          |
+| **F1-스코어 (F1-Score)**   | 0.84 (정밀도와 재현율의 조화평균)             | 0.76 (정밀도와 재현율의 조화평균)                |
+| **지원 (Support)**         | 105                                       | 74                                           |
+
+| **평균 지표**             | **값**                                       |
+|---------------------------|---------------------------------------------|
+| **정확도 (Accuracy)**      | 0.80 (전체 데이터에서 정확히 예측한 비율)        |
+| **Macro 평균**             | Precision: 0.80, Recall: 0.79, F1-Score: 0.80 |
+| **Weighted 평균**          | Precision: 0.80, Recall: 0.80, F1-Score: 0.80 |
+
+**요약**: Logistic Regression 모델은 약 80%의 정확도를 보이며, 희생자를 예측하는 데 있어서 재현율이 높아(0.86) 희생자를 잘 예측. 생존자에 대한 재현율은 상대적으로 낮아(0.73) 생존자를 놓치는 경향이 약간 있음.
+
+> Decision Tree
+
+```py
+#Decision Tree
+
+from sklearn.tree import DecisionTreeClassifier  # Decision Tree 분류기
+# 데이터 분할
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 데이터 스케일링
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# 모델 생성 및 학습
+model = DecisionTreeClassifier(random_state=42)
+model.fit(X_train, y_train)
+
+# 예측
+y_pred = model.predict(X_test)
+
+# 평가
+print(f"Accuracy: {accuracy_score(y_test, y_pred)}")
+print(f"Classification Report:\n{classification_report(y_test, y_pred)}")
+```
+
+> 🔍 Decision Tree 모델 결과 요약
+
+| **지표**                  | **희생자 (0)**                               | **생존자 (1)**                                |
+|---------------------------|----------------------------------------------|-----------------------------------------------|
+| **정밀도 (Precision)**     | 0.83 (모델이 예측한 '희생자' 중 실제 희생자 비율) | 0.70 (모델이 예측한 '생존자' 중 실제 생존자 비율) |
+| **재현율 (Recall)**        | 0.76 (실제 희생자 중 정확히 예측한 비율)         | 0.78 (실제 생존자 중 정확히 예측한 비율)          |
+| **F1-스코어 (F1-Score)**   | 0.80 (정밀도와 재현율의 조화평균)             | 0.74 (정밀도와 재현율의 조화평균)                |
+| **지원 (Support)**         | 105                                       | 74                                           |
+
+| **평균 지표**             | **값**                                       |
+|---------------------------|---------------------------------------------|
+| **정확도 (Accuracy)**      | 0.77 (전체 데이터에서 정확히 예측한 비율)        |
+| **Macro 평균**             | Precision: 0.77, Recall: 0.77, F1-Score: 0.77 |
+| **Weighted 평균**          | Precision: 0.78, Recall: 0.77, F1-Score: 0.77 |
+
+**요약**: Decision Tree 모델은 약 77%의 정확도를 보이며, 희생자 예측에서 정밀도가 높아(0.83) 희생자를 잘 분류하는 경향이 있음. 생존자의 재현율이 다소 높아(0.78) 생존자를 놓치는 경우는 적으나, 정밀도가 희생자에 비해 낮아(0.70) 생존자 예측 정확도가 떨어질 수 있음.
+
+> XGBoost
+
+```py
+import xgboost as xgb
+from sklearn.metrics import mean_squared_error
+
+# 데이터 분할
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# 데이터 스케일링
+scaler = StandardScaler()
+X_train_scaled = scaler.fit_transform(X_train)
+X_test_scaled = scaler.transform(X_test)
+
+# XGBoost 모델 생성
+xgb_model = xgb.XGBRegressor(n_estimators=100, learning_rate=0.1, max_depth=3, random_state=42)
+
+# 모델 학습
+xgb_model.fit(X_train_scaled, y_train)
+
+# 예측
+y_pred_xgb = xgb_model.predict(X_test_scaled)
+
+# 평가
+mse_xgb = mean_squared_error(y_test, y_pred_xgb)
+print(f'XGBoost 모델의 MSE: {mse_xgb}')
+```
+
+> 🔍 XGBoost 모델 결과 요약
+
+| **지표**                  | **희생자 (0)**                               | **생존자 (1)**                                |
+|---------------------------|----------------------------------------------|-----------------------------------------------|
+| **정밀도 (Precision)**     | 0.82 (모델이 예측한 '희생자' 중 실제 희생자 비율) | 0.78 (모델이 예측한 '생존자' 중 실제 생존자 비율) |
+| **재현율 (Recall)**        | 0.86 (실제 희생자 중 정확히 예측한 비율)         | 0.73 (실제 생존자 중 정확히 예측한 비율)          |
+| **F1-스코어 (F1-Score)**   | 0.84 (정밀도와 재현율의 조화평균)             | 0.76 (정밀도와 재현율의 조화평균)                |
+| **지원 (Support)**         | 105                                       | 74                                           |
+
+| **평균 지표**             | **값**                                       |
+|---------------------------|---------------------------------------------|
+| **정확도 (Accuracy)**      | 0.80 (전체 데이터에서 정확히 예측한 비율)        |
+| **Macro 평균**             | Precision: 0.80, Recall: 0.79, F1-Score: 0.80 |
+| **Weighted 평균**          | Precision: 0.80, Recall: 0.80, F1-Score: 0.80 |
+
+**요약**: XGBoost 모델은 약 80%의 정확도를 보이며, 희생자 예측에서 높은 재현율(0.86)로 실제 희생자를 잘 식별하는 경향이 있음. 생존자 예측에서는 정밀도가 상대적으로 높아(0.78) 생존자를 더 정확하게 예측하며, 생존자 재현율은 0.73으로 다소 낮음. 전반적으로, XGBoost 모델은 희생자 식별에 강점을 보임.
+</details>
+
+<br>
+<details>
+<summary>
+5. 모델 성능 비교 (추가)
+</summary>
+
 > 타이타닉 생존자 예측 결과 모델 성능 비교
 
 | **모델**          | **Accuracy** | <span style="color:red">**Precision (희생자)**</span> | <span style="color:blue">**Precision (생존자)**</span> | <span style="color:red">**Recall (희생자)**</span> | <span style="color:blue">**Recall (생존자)**</span> | <span style="color:red">**F1-Score (희생자)**</span> | <span style="color:blue">**F1-Score (생존자)**</span> |
@@ -862,4 +1018,4 @@ print(titanic['family_size'].head())
 
 - [x] NLP 이용
 
-- [x] 긍정 / 부정 리뷰의 워드 클라우드 그려보기 --> -->
+- [x] 긍정 / 부정 리뷰의 워드 클라우드 그려보기 --> 
