@@ -1198,9 +1198,11 @@ print('데이터 타입 : ', type(df['score']))
 <br>
 
 <details>
-<summary>keras 방식으로 학습 테스트</summary>
+<summary>모델 학습 테스트 및 기능 개선</summary>
 
 <br>
+
+### Keras 방식으로 학습 테스트 
 
 > Keras는 딥러닝 모델을 쉽게 구축하고 훈련할 수 있도록 돕는 고수준의 API로, 텐서플로우와 같은 백엔드 위에서 작동합니다.
 
