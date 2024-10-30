@@ -9,39 +9,39 @@
 |        | ![박성규님](https://github.com/user-attachments/assets/40f97c52-c562-44b0-bef6-12289e149d27) | ![김민철님](https://github.com/user-attachments/assets/28b83bd5-13c2-4249-beab-64f7567e1816) | ![이시헌님](https://github.com/user-attachments/assets/7b91b2aa-c113-44ed-8f41-e8df1ef7d06d) | ![박윤지님](https://github.com/user-attachments/assets/8d5be377-1a58-4f88-9ee2-176d1e1d162e) |
 | **역할** | 오류 제어 및 REPO 관리 & 이모티콘 전처리 기능 추가                                                                | 모델 학습 테서트 및 기능 개선                                                                                | 모델 성능 비교 및 데이터 통계 마크다운 & README.md 작성                                                          | GIT 충돌 관리 및 팀원 코드 리뷰 & 모델 별 시각화                                                                 |
 
-## 개발 환경
+# 개발 환경
 
 ![://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nmhttps1.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png) ![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png)![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png)
 
-## 진행한 프로젝트 목록
+# 진행한 프로젝트 목록
 
-- ### [타이타닉 생존자 예측](#%EF%B8%8F-타이타닉-생존자-예측)
+- ## [타이타닉 생존자 예측](#%EF%B8%8F-타이타닉-생존자-예측)
   
-  - #### [목표](#목표)
-  1. 데이터셋 불러오기
-  2. feature 분석
-  3. feature engineering
-  4. 모델 학습시키기 (Logistic Regression, Decision Tree, XGBoost)
+  - ### [목표](#목표)
+    #### 1. 데이터셋 불러오기
+    #### 2. feature 분석
+    #### 3. feature engineering
+    #### 4. 모델 학습시키기 <br> (Logistic Regression, Decision Tree, XGBoost)
 
-  - #### [추가 목표]()
-  5. 모델별 시각화 자료 (추가)
-  6. 모델 성능 비교 (추가)
+  - ### [추가 목표]()
+    #### 5. 모델별 시각화 자료 (추가)
+    #### 6. 모델 성능 비교 (추가)
 
-- ### [영화 리뷰 감성 분석](#-영화-리뷰-감성-분석)
+- ## [영화 리뷰 감성 분석](#-영화-리뷰-감성-분석)
 
-  - #### 목표
-  1. 데이터셋 불러오기
-  2. 데이터 전처리
-  3. feature 분석 (EDA)
-  4. 리뷰 예측 모델 학습시키기 (LSTM)
+  - ### 목표
+    #### 1. 데이터셋 불러오기
+    #### 2. 데이터 전처리
+    #### 3. feature 분석 (EDA)
+    #### 4. 리뷰 예측 모델 학습시키기 (LSTM)
 
-  - #### 추가 목표 
-  - [x] NLP 이용
-  - [x] 긍정 / 부정 리뷰의 워드 클라우드 그려보기
+  - ### 추가 목표 
+    - [x] NLP 이용
+    - [x] 긍정 / 부정 리뷰의 워드 클라우드 그려보기
 
-- ### [예측 모델 기능 개선 (추가)](#예측-모델-기능-개선-추가)
-  - 이모티콘 전처리
-  - 모델 학습 테스트 및 기능 개선
+  - ### [예측 모델 기능 개선 (추가)](#예측-모델-기능-개선-추가)
+   - #### 이모티콘 전처리
+   - #### 모델 학습 테스트 및 기능 개선
 
 ### ⛴️ 타이타닉 생존자 예측
 
@@ -50,7 +50,7 @@
 #### 목표
 
 <details>
-<summary>1. 데이터셋 불러오기</summary>
+<summary> 1. 데이터셋 불러오기</summary>
 
 ```python
 import seaborn as sns
@@ -1018,7 +1018,7 @@ print(f'XGBoost 모델의 MSE: {mse_xgb}')
 
 <br>
 
-추가 목표
+#### 추가 목표
 
 <details>
 <summary>
