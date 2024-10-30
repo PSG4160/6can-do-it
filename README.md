@@ -7,11 +7,11 @@
 |        | ![박성규님](https://github.com/user-attachments/assets/40f97c52-c562-44b0-bef6-12289e149d27) | ![김민철님](https://github.com/user-attachments/assets/28b83bd5-13c2-4249-beab-64f7567e1816) | ![이시헌님](https://github.com/user-attachments/assets/7b91b2aa-c113-44ed-8f41-e8df1ef7d06d) | ![박윤지님](https://github.com/user-attachments/assets/8d5be377-1a58-4f88-9ee2-176d1e1d162e) |
 | **역할** | 오류 제어 및 REPO 관리 & 이모티콘 전처리 기능 추가                                                                | 모델 학습 테서트 및 기능 개선                                                                                | 모델 성능 비교 및 데이터 통계 마크다운 & README.md 작성                                                          | GIT 충돌 관리 및 팀원 코드 리뷰 & 모델 별 시각화                                                                 |
 
-# 개발 환경
+## 개발 환경
 
 ![://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nmhttps1.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566791609/noticon/nen1y11gazeqhejw7nm1.png) ![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1626170585/noticon/uqui2rrxtt26ngudnhdu.png)![https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png](https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1632975248/noticon/sph4ujixspcnhzpw8zky.png)
 
-# 진행한 프로젝트 목록
+# 목차
 
 - ## [타이타닉 생존자 예측](#%EF%B8%8F-타이타닉-생존자-예측)
   
