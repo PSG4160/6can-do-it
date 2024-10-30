@@ -1016,8 +1016,6 @@ print(f'XGBoost 모델의 MSE: {mse_xgb}')
 
 </details>
 
-<br>
-
 #### 추가 목표
 
 <details>
